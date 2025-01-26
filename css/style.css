@@ -1,0 +1,280 @@
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f4f4f9;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+ }
+ 
+ /* Todo App Container */
+ .todo-app {
+   background: #fff;
+   padding: 20px;
+   border-radius: 12px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   width: 90%; /* Adjusted for responsiveness */
+   max-width: 450px;
+   text-align: center;
+   animation: fadeIn 1s ease-in-out; /* Animation added */
+ }
+ 
+ /* Fade-In Animation */
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+     transform: translateY(-20px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ /* Title */
+ h1 {
+   color: #333;
+   margin-bottom: 1rem;
+ }
+ 
+ /* Input Section */
+ .todo-input {
+   display: flex;
+   justify-content: space-between;
+   gap: 10px; /* Added spacing for small screens */
+   margin-bottom: 20px;
+ }
+ 
+ .todo-input input {
+   width: 70%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 16px;
+   transition: border-color 0.3s ease; /* Smooth focus effect */
+ }
+ 
+ .todo-input input:focus {
+   outline: none;
+   border-color: #28a745;
+ }
+ 
+ .todo-input button {
+   padding: 10px 20px;
+   background: #28a745;
+   color: #fff;
+   border: 2px solid #218838;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+ 
+ .todo-input button:hover {
+   background: #218838;
+   border-color: #1e7e34;
+   transform: scale(1.05); /* Add hover scaling */
+ }
+ 
+ /* List Styles */
+ ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ li {
+   background: #f9f9f9;
+   margin: 10px 0;
+   padding: 10px 15px;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+   flex-wrap: wrap;
+   transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+ }
+ 
+ li:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Task Buttons */
+ .task-buttons {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+ }
+ 
+ button {
+   padding: 5px 10px;
+   font-size: 14px;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+ 
+ button.add-btn {
+   background: #007bff;
+   color: #fff;
+   border: 2px solid #0056b3;
+ }
+ 
+ button.add-btn:hover {
+   background: #0056b3;
+   border-color: #003f7f;
+   transform: scale(1.05); /* Hover scaling effect */
+ }
+ 
+ button.del-btn {
+   background: #dc3545;
+   color: #fff;
+   border: 2px solid #b02a37;
+ }
+ 
+ button.del-btn:hover {
+   background: #b02a37;
+   border-color: #881f2b;
+   transform: scale(1.05);
+ }
+ 
+ .quantity {
+   font-size: 16px;
+   font-weight: bold;
+ }
+ 
+ button.save-btn {
+   background: #ffc107;
+   color: #fff;
+   border: 2px solid #e0a800;
+ }
+ 
+ button.save-btn:hover {
+   background: #e0a800;
+   border-color: #c69500;
+   transform: scale(1.05);
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 480px) {
+   .todo-app {
+     padding: 15px;
+   }
+ 
+   .todo-input input {
+     width: 60%;
+     font-size: 14px;
+   }
+ 
+   .todo-input button {
+     font-size: 14px;
+     padding: 8px 16px;
+   }
+ 
+   li {
+     flex-direction: column; /* Stack items for small screens */
+     align-items: flex-start;
+   }
+ 
+   .task-buttons {
+     justify-content: space-between;
+     width: 100%;
+   }
+ }
+
+ /* Video Background */
+.background-video {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: -1; /* Ensure it stays behind the content */
+   filter: brightness(0.5); /* Optional: Adjust brightness for readability */
+ }
+ 
+ /* General Styles */
+ body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   overflow: hidden; /* Prevent scroll bars if video overflows */
+ }
+ 
+ /* Todo App Container */
+ .todo-app {
+   background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+   padding: 20px;
+   border-radius: 12px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   width: 90%;
+   max-width: 450px;
+   text-align: center;
+ }
+ 
+ /* Input and Button */
+ .todo-input input {
+   width: 70%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 16px;
+ }
+ 
+ .todo-input button {
+   padding: 10px 20px;
+   background: #28a745;
+   color: #fff;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .todo-input button:hover {
+   background: #218838;
+ }
+ 
+ /* Task List */
+ ul {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ li {
+   background: #f9f9f9;
+   margin: 10px 0;
+   padding: 10px 15px;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 480px) {
+   .todo-app {
+     padding: 15px;
+   }
+   .todo-input input {
+     width: 60%;
+     font-size: 14px;
+   }
+   .todo-input button {
+     font-size: 14px;
+   }
+ }
+ 
